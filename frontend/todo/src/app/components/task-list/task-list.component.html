@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-center text-primary">Task List</h2>
+  <ul class="list-group">
+    <li
+      *ngFor="let task of tasks"
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <div>
+        <input
+          type="checkbox"
+          class="form-check-input me-2"
+          [(ngModel)]="task.completed"
+          (change)="toggleComplete(task)"
+        />
+        <span [ngClass]="{ 'text-decoration-line-through text-muted': task.completed }">
+          <strong>{{ task.title }}</strong>
+        </span>
+        <p class="mb-0 text-secondary">{{ task.description }}</p>
+      </div>
+      <div>
+        <button class="btn btn-sm btn-warning me-2" (click)="startEdit(task.id)">
+          <i class="fas fa-edit"></i> Edit
+        </button>
+        <button class="btn btn-sm btn-danger" (click)="deleteTask(task.id)">
+          <i class="fas fa-trash-alt"></i> Delete
+        </button> 
+      </div>
+    </li>
+  </ul>
+</div>

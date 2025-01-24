@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <h2 class="mb-4 text-center text-success">Add Task</h2>
+  <form (ngSubmit)="addTask()" class="d-flex flex-column align-items-center">
+    <div class="mb-3 w-50">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Title"
+        [(ngModel)]="task.title"
+        name="title"
+        required
+      />
+    </div>
+    <div class="mb-3 w-50">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Description"
+        [(ngModel)]="task.description"
+        name="description"
+        required
+      />
+    </div>
+    <button class="btn btn-success w-50" type="submit">Add Task</button>
+  </form>
+</div>

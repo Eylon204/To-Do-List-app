@@ -1,0 +1,12 @@
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+  }
+  
+  .list-group-item {
+    border-radius: 10px;
+  }
+  
+  .text-decoration-line-through {
+    font-style: italic;
+  }
